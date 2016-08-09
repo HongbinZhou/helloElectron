@@ -3,15 +3,18 @@
     <head>
         <meta charset="utf-8">
         <title> My first Electron app</title>
+        <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
-        <h1>Head 1</h1>
-        <h1>Head 2</h1>
-        <h1>Head 3</h1>
+        <main>
+            <div class="container">
+                <div class="editor">
+                    <textarea autofocus="true" placeholder="# Write something here ..."></textarea>
+                </div>
+                <div class="preview"></div>
+            </div>
+        </main>
+        <script type="text/javascript" src="index.js"></script>
     </body>
-
-    <script>
-     require('./app.js')
-    </script>
 </html>

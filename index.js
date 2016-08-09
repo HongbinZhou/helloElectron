@@ -1,13 +1,23 @@
-const electron = require('electron')
-const app = electron.app;
-const BrowserWindow = electron.BrowserWindow;
+const marked = require('marked');
 
-var mainWindow = null;
+const editor = document.querySelector('.editor textarea');
+const preview = document.querySelector('.preview');
 
-app.on('ready', ()=>{
-    mainWindow = new BrowserWindow({
-        width: 800,
-        height: 500
-    })
-    mainWindow.loadURL('file://' + __dirname + '/index.html');
-})
+marked.setOptions({
+    gfm: true,
+    tables: true,
+    breaks: false,
+    pedantic: false,
+    sanitize: true,
+    smartLists: true,
+    smartypants: false
+});
+
+editor.onkeyup = generatePreview;
+
+function generatePreview () {
+    var content = editor.value;
+    var html = marked(content);
+    preview.innerHTML = html;
+}
+
