@@ -38,3 +38,11 @@ body {
   margin-left: -2px;
   background-color: #ddd;
 }
+
+.hidden {
+    display: none;
+}
+
+.header a {
+    color: #ddd;
+}

@@ -10,4 +10,6 @@ app.on('ready', ()=>{
         height: 500
     });
     mainWindow.loadURL('file://' + __dirname + '/index.html');
+
+    // mainWindow.webContents.openDevTools();
 });
