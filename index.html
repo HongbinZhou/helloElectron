@@ -4,21 +4,33 @@
         <meta charset="utf-8">
         <title> My first Electron app</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="tab-style.css">
     </head>
 
     <body>
         <main>
-            <div class="header">
-                <div class="title">Awesome Editor</div>
-                <a href="#" class="open-file">Open file</a>
+
+            <ul class="tab">
+                <li><a href="#" class="tablinks" onclick="openCity(event, 'Home')">Home</a></li>
+                <li><a href="#" class="tablinks" onclick="openCity(event, 'Validator')">Validator</a></li>
+                <li><a href="#" class="tablinks" onclick="openCity(event, 'Convertor')">Convertor</a></li>
+            </ul>
+
+            <div id="Home" class="tabcontent">
+                <p>This is the home of this app.</p>
             </div>
-            <div class="container hidden">
-                <div class="editor">
-                    <textarea autofocus="true" placeholder="# Write something here ..."></textarea>
-                </div>
-                <div class="preview"></div>
+
+            <div id="Validator" class="tabcontent">
+                <p>This is the validator page.</p>
             </div>
-        </main>
-        <script type="text/javascript" src="index.js"></script>
+
+            <div id="Convertor" class="tabcontent">
+                <p>This is the convertor page.</p>
+            </div>
+
+            <script type="text/javascript" src="index.js"></script>
+
+            <script type="text/javascript" src="tab.js"></script>
+
     </body>
 </html>
