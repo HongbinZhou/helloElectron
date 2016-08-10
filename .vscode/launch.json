@@ -20,7 +20,11 @@
             },
             "externalConsole": false,
             "sourceMaps": false,
-            "outDir": null
+            "outDir": null,
+            "windows": {
+                "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron.cmd",
+                "runtimeArgs": ["--enable-logging"]
+            }
         },
         {
             "name": "Attach",
@@ -42,6 +46,19 @@
             "port": 5858,
             "sourceMaps": false,
             "outDir": null
+        },
+        {
+            "name": "Debug",
+            "type": "chrome",
+            "request": "launch",
+            "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron.cmd",
+            "runtimeArgs": [
+                "${workspaceRoot}",
+                "--enable-logging",
+                "--remote-debugging-port=9222"
+            ],
+            "sourceMaps": false,
+            "userDataDir": "${workspaceRoot}/out/chrome",
         }
     ]
 }
