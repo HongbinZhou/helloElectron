@@ -46,3 +46,7 @@ body {
 .header a {
     color: #ddd;
 }
+
+td {
+    vertical-align: top;
+}
