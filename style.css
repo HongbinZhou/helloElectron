@@ -50,3 +50,7 @@ body {
 td {
     vertical-align: top;
 }
+
+th, td {
+    padding: 8px;
+}
