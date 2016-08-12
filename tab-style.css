@@ -4,13 +4,10 @@ ul.tab {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    border: 1px solid #ccc;
     background-color: #f1f1f1;
     /* position: absolute; */
     float: left;
-    /* margin: 50px 0 0 0; */
     width: 125px;
-
 }
 
 /* Float the list items side by side */
@@ -18,9 +15,9 @@ ul.tab {
 
 /* Style the links inside the list items */
 ul.tab li a {
-    display: inline-block;
+    display: block;
     color: black;
-    text-align: center;
+    text-align: left;
     padding: 14px 16px;
     text-decoration: none;
     transition: 0.3s;
